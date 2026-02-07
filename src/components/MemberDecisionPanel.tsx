@@ -72,7 +72,7 @@ export const MemberDecisionPanel: FC = () => {
   const handleDecision = async (memberId: string, action: Decision) => {
     if (!activeRequestId) return;
 
-    await fetch("http://localhost:5000/api/requests/decision", {
+    await fetch("https://car-backend-onkl.onrender.com/api/requests/decision", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
