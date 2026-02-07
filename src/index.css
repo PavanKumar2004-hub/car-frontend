@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+
+/* hide-scrollbar.css */
+.hide-scrollbar {
+  overflow: auto;
+  /* scrolling still works */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/old Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.speed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+}
+
+.speed-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes roadMove {
+  0% {
+    transform: translateY(0);
+    scale: 100%;
+  }
+
+  100% {
+    transform: translateY(10%);
+    scale: 135%;
+  }
+}
+
+.animate-road-move {
+  animation: roadMove 3s linear infinite;
+}
+
+
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: #06070a;
+  color: #e5e7eb;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
